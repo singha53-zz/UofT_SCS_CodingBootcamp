@@ -12,25 +12,27 @@
 
 <body>
     <!-- header -->
-    <header>
-        <h1 id="name">Amrit Singh</h1>
-        <ul>
-            <li>
-                <a href="">About</a>
-            </li>
-            <li id="portfolio">
-                <a href="">Portfolio</a>
-            </li>
-            <li>
-                <a href="">Contact</a>
-            </li>
-        </ul>
+    <header class="navbar">
+        <a href id="name">NavBar</a>
+        <div>
+            <ul class="navbar-items">
+                <li class="nav-item">
+                    <a href="">About</a>
+                </li>
+                <li class="nav-item" id="contact">
+                    <a href="">Contact</a>
+                </li>
+                <li class="nav-item">
+                    <a href="">Portfolio</a>
+                </li>
+            </ul>
+        </div>
     </header>
 
     <div id="mainContent" class="clearfix">
         <h1>About me</h1>
         <hr>
-        <img src="#assets/images/Amrit_headshotV2-250x300.jpeg" alt="Picture not loading">
+        <img src="assets/images/Amrit_headshotV2-250x300.jpeg" alt="Picture not loading">
         <p>I am researcher at the University of British Columbia, studying asthma and heart failure. I am interested in identifying
             molecular biomarkers of different disease phenotypes. I am also interested in developing algorithms to integration
             multiple omics datasets obtained on the same set of individuals. Lastly, I am interesting in developing web applications
