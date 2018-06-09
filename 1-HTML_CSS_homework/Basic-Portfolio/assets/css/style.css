@@ -7,6 +7,8 @@
   padding: 0;
   border-style: solid;
   border-bottom-width: 2px;
+  border-color: #cccccc;
+  background-color: #ffffff;
 }
 
 /* name in navbar */
@@ -14,7 +16,6 @@
   margin: 0px 0 0 50px;
   color: white;
   background: #4aaaa5;
-  font-size: 28px;
   padding: 20px;
 }
 
@@ -40,11 +41,21 @@
 }
 
 #mainContent {
-  margin: 50px 50px;
-  padding: 50px;
+  margin: 50px auto;
+  padding: 30px 50px;
   line-height: 2;
   border: #dddddd solid 1px;
   width: 859px;
+  background-color: #ffffff;
+}
+
+img {
+  float: left;
+  padding: 0px 15px 0 0;
+}
+
+p {
+  color: #777777;
 }
 
 footer {
@@ -56,4 +67,16 @@ footer {
   border-style: solid;
   border-top-color: #4aaaa5;
   text-align: center;
+}
+
+/* heading font-color */
+h1 {
+  font-family: 'Georgia', Times, Times New Roman, serif;
+  font-size: 28px;
+}
+
+/* font family for all other text apart from the heading */
+body {
+  font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
+  background: url('../../assets/images/light-grey-terrazzo.png');
 }
