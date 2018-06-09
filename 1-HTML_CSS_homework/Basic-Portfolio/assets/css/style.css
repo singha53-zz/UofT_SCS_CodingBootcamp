@@ -49,5 +49,11 @@
 
 footer {
   margin: 0;
-  background: black;
+  padding: 20px 0px 0px 0px;
+  color: white;
+  background: #666666;
+  border-top: 6px;
+  border-style: solid;
+  border-top-color: #4aaaa5;
+  text-align: center;
 }
