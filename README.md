@@ -11,7 +11,7 @@
 
 <strong>Obective</strong>: build a professional portfolio site containing 3 pages (About, Contact and Portfolio). <br>
 <strong>languages</strong>: HTML/CSS <br>
-[repo](https://github.com/singha53/UofT_SCS_CodingBootcamp/tree/master/1-HTML_CSS_homework/Basic-Portfolio)
+[repo](https://github.com/singha53/UofT_SCS_CodingBootcamp/tree/master/1-HTML_CSS_homework/Basic-Portfolio) <br>
 [website](http://amritsingh.ca/UofT_SCS_CodingBootcamp/1-HTML_CSS_homework/Basic-Portfolio/)
 
 ## CSS_Framework_&_MediaQueries <a name="css-framework-mediaqueries"></a>
