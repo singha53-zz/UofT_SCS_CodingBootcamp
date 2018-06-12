@@ -1,36 +1,20 @@
 # UofT_SCS_CodingBootcamp
 
--   [HTML_CSS_homework](#html-css-homework)
--   [CSS_Framework_&_MediaQueries](#css-framework-mediaqueries)
--   [JavaScript_homework](#javascript-homework)
--   [jQuery_homework](#jquery-homework)
--   [jQuery_&_JavaScript_homework](#jquery-javascript-homework)
+1.  [HTML_CSS_homework](#html-css-homework)
+2.  [CSS_Framework_&_MediaQueries](#css-framework-mediaqueries)
+3.  [JavaScript_homework](#javascript-homework)
+4.  [jQuery_homework](#jquery-homework)
+5.  [jQuery_&_JavaScript_homework](#jquery-javascript-homework)
 
 
-# HTML_CSS_homework
+## HTML_CSS_homework <a name="html-css-homework"></a>
 
 I built a professional portfolio site using HTML/CSS containing 3 pages (About, Contact and Portfolio).
 
-# CSS_Framework_&_MediaQueries
+## CSS_Framework_&_MediaQueries <a name="css-framework-mediaqueries"></a>
 
-# JavaScript_homework
+## JavaScript_homework <a name="javascript-homework"></a>
 
-# jQuery_homework
+## jQuery_homework <a name="jquery-homework"></a>
 
-# Table of contents
-1. [Introduction](#introduction)
-2. [Some paragraph](#paragraph1)
-    1. [Sub paragraph](#subparagraph1)
-3. [Another paragraph](#paragraph2)
-
-## This is the introduction <a name="introduction"></a>
-Some introduction text, formatted in heading 2 style
-
-## Some paragraph <a name="paragraph1"></a>
-The first paragraph text
-
-### Sub paragraph <a name="subparagraph1"></a>
-This is a sub paragraph, formatted in heading 3 style
-
-## Another paragraph <a name="paragraph2"></a>
-The second paragraph text
+## jQuery_&_JavaScript_homework <a name="jquery-javascript-homework"></a>
