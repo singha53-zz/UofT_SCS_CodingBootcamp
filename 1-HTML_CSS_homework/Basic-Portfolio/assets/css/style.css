@@ -1,19 +1,23 @@
-.navbar {
-  position: relative;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
+header {
+  text-align: center;
   padding: 0;
-  border-style: solid;
-  border-bottom-width: 2px;
-  border-color: #cccccc;
-  background-color: #ffffff;
+  margin: 0 auto;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  border-bottom: 1px solid #cccccc;
 }
 
-/* name in navbar */
+.nav {
+  width: 960px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
 #name {
-  margin: 0px 0 0 50px;
+  margin: 0px 0 0 0px;
   color: white;
   background: #4aaaa5;
   padding: 20px;
@@ -40,13 +44,28 @@
   padding-right: 1rem;
 }
 
-#mainContent {
+/* remove underlines from achor tags */
+a {
+  text-decoration: none;
+}
+/* remove visited link color */
+a:visited {
+  color: #777777;
+}
+
+#about {
+  color: #4aaaa5;
+  font-weight: 900;
+}
+
+main {
   margin: 50px auto;
   padding: 30px 50px;
   line-height: 2;
   border: #dddddd solid 1px;
-  width: 859px;
+  width: 858px;
   background-color: #ffffff;
+  color: #777777;
 }
 
 /* indent 2nd paragraph */
@@ -59,18 +78,12 @@ img {
   padding: 0px 15px 0 0;
 }
 
-p {
-  color: #777777;
-}
-
 footer {
   margin: 0;
-  padding: 20px 0px 0px 0px;
+  padding: 40px 0px 0px 0px;
   color: #ffffff;
   background: #666666;
-  border-top: 6px;
-  border-style: solid;
-  border-top-color: #4aaaa5;
+  border-top: 6px solid #4aaaa5;
   text-align: center;
 }
 
