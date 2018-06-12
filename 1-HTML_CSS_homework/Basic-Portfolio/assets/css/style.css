@@ -1,3 +1,5 @@
+/* Common styles for all webpages */
+
 header {
   text-align: center;
   padding: 0;
@@ -53,11 +55,6 @@ a:visited {
   color: #777777;
 }
 
-#about {
-  color: #4aaaa5;
-  font-weight: 900;
-}
-
 main {
   margin: 50px auto;
   padding: 30px 50px;
@@ -68,14 +65,9 @@ main {
   color: #777777;
 }
 
-/* indent 2nd paragraph */
-.tab {
-  text-indent: 40px;
-}
-
-img {
+#profilePic {
   float: left;
-  padding: 0px 15px 0 0;
+  padding-right: 15px;
 }
 
 footer {
@@ -99,7 +91,54 @@ body {
   background: url('../../assets/images/light-grey-terrazzo.png');
 }
 
+#about,
+#portfolio {
+  color: #4aaaa5;
+  font-weight: 900;
+}
+
 /* keep images within main content container */
 .clearfix {
   overflow: auto;
+}
+
+/* */
+/* */
+/* */
+/* CSS style for index.html */
+/* */
+/* */
+/* */
+/* indent 2nd paragraph */
+.tab {
+  text-indent: 40px;
+}
+
+/* */
+/* */
+/* */
+/* CSS style for portfolio.html */
+/* */
+/* */
+/* */
+.container {
+  float: left;
+  position: relative;
+  text-align: end;
+  color: white;
+  border: #4aaaa5;
+}
+
+.imageLabel {
+  position: relative;
+  background: #4aaaa5;
+  text-align: center;
+  width: 200px;
+  top: -50px;
+}
+
+.apps {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
 }
