@@ -9,7 +9,9 @@
 
 ## HTML_CSS_homework <a name="html-css-homework"></a>
 
-I built a professional portfolio site using HTML/CSS containing 3 pages (About, Contact and Portfolio).
+Obective: build a professional portfolio site containing 3 pages (About, Contact and Portfolio).
+languages: HTML/CSS
+[repo link](https://www.google.com)
 
 ## CSS_Framework_&_MediaQueries <a name="css-framework-mediaqueries"></a>
 
