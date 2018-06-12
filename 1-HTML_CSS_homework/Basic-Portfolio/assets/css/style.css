@@ -1,4 +1,6 @@
+/* ######################################## */
 /* HTML element common to all pages */
+/* ######################################## */
 html,
 body {
   height: 100%;
@@ -17,10 +19,6 @@ h1 {
   padding: 0px;
   min-height: 100%;
   margin: 0 auto -70px;
-}
-
-.footer {
-  height: 50px;
 }
 
 header {
@@ -72,15 +70,18 @@ header {
 }
 
 /* remove underlines from achor tags */
-
 a {
   text-decoration: none;
 }
 
 /* remove visited link color */
-
 a:visited {
   color: #777777;
+}
+
+/* change color of links upon hover */
+a:hover {
+  color: blue;
 }
 
 main {
@@ -91,15 +92,6 @@ main {
   line-height: 1.5;
   background-color: #ffffff;
   color: #777777;
-}
-
-.tab {
-  text-indent: 40px;
-}
-
-#profilePic {
-  float: left;
-  padding-right: 15px;
 }
 
 .clearfix::after {
@@ -113,6 +105,7 @@ main {
 }
 
 footer {
+  height: 50px;
   background: #666666;
   color: white;
   padding: 0 20px;
@@ -123,25 +116,22 @@ footer {
   border-top: #4aaaa5 solid 4px;
 }
 
-/* */
-/* */
-/* */
-/* CSS style for index.html */
-/* */
-/* */
-/* */
-/* indent 2nd paragraph */
+/* ######################################## */
+/* CSS sytles for about page */
+/* ######################################## */
+/* indent paragraphs */
 .tab {
   text-indent: 40px;
 }
 
-/* */
-/* */
-/* */
-/* CSS style for portfolio.html */
-/* */
-/* */
-/* */
+#profilePic {
+  float: left;
+  padding-right: 15px;
+}
+
+/* ######################################## */
+/* CSS sytles for portfolio page */
+/* ######################################## */
 .container {
   float: left;
   position: relative;
