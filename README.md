@@ -23,3 +23,20 @@ I built a professional portfolio site using HTML/CSS containing 3 pages (About, 
 
 5-jQuery_&_JavaScript_homework
 =======================
+
+-   [Chapter 1: Introduction](#chapter-1-introduction)
+-   [Chapter 2: Statistical Leanring](#chapter-2-statistical-leanring)
+    -   [Quiz question](#quiz-question)
+    -   [2.2 R1](#r1)
+    -   [2.3 R1](#r1-1)
+    -   [2.3 R2](#r2)
+
+Chapter 1: Introduction
+=======================
+
+-   opening remarks
+
+Notes: Supervised Learning - Y: outcome measurement - X: predictor measurements - training data: (x1, y1), ..., (xN, yN)
+
+Chapter 2: Statistical Leanring
+===============================
