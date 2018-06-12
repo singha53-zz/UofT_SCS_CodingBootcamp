@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    html,
+    body {
+      height: 100%;
+      margin: 0;
+    }
+
+    .content {
+      padding: 0px;
+      min-height: 100%;
+      margin: 0 auto -70px;
+    }
+
+    .footer {
+      height: 50px;
+    }
+
+    header {
+      text-align: center;
+      padding: 0;
+      margin: 0 auto;
+      background-color: white;
+      display: flex;
+      justify-content: center;
+      border-bottom: 1px solid #cccccc;
+    }
+
+    .nav {
+      width: 960px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    #name {
+      margin: 0;
+      color: white;
+      background: #4aaaa5;
+      padding: 10px;
+    }
+
+    .navbar-items {
+      display: flex;
+      /*set display property to flex in order to use CSS Flexbox*/
+      flex-wrap: wrap;
+      /*fits all list items a single line*/
+      list-style: none;
+      /*remove bullet points from list*/
+    }
+
+    .nav-item {
+      padding: 0rem;
+      margin: 1rem;
+    }
+
+    #contact {
+      border-left: solid 1px;
+      border-right: solid 1px;
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+
+    /* remove underlines from achor tags */
+
+    a {
+      text-decoration: none;
+    }
+
+    /* remove visited link color */
+
+    a:visited {
+      color: #777777;
+    }
+
+    main {
+      margin: 20px auto;
+      padding: 20px;
+      border: #dddddd solid 1px;
+      width: 858px;
+      line-height: 1.5;
+      background-color: #ffffff;
+      color: #777777;
+    }
+
+    .tab {
+      text-indent: 40px;
+    }
+
+    #profilePic {
+      float: left;
+      padding-right: 15px;
+    }
+
+    .clearfix {
+      overflow: auto;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    footer {
+      background: #666666;
+      color: white;
+      /* line-height: 50px; */
+      padding: 0 20px;
+      text-align: center;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      border-top: #4aaaa5 solid 4px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="content">
+    <header>
+      <div class="nav">
+        <a id="name">
+          <h1>Amrit Singh</h1>
+        </a>
+        <div>
+          <ul class="navbar-items">
+            <li class="nav-item">
+              <a href="index.html">About</a>
+            </li>
+            <li class="nav-item" id="contact">
+              <a href="contact.html">Contact</a>
+            </li>
+            <li class="nav-item">
+              <a href="portfolio.html">Portfolio</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+
+    <main class="clearfix">
+      <h1 id="about">About me</h1>
+      <hr>
+      <div>
+        <p>
+          <img id="profilePic" src="assets/images/Amrit_headshotV2-250x300.jpeg" alt="Picture not loading"> I was born in New Delhi India, on March 11, 1989. I moved to Canada when I was 7 and was raised in Brampton Ontario.
+          I completed my undergraduate studies at McMaster University and obtained a Bachelor's in Science (Honours) in Biology
+          and Mathematics.
+        </p>
+        <p class="tab">
+          I was unsure as to what to do next and moved out west to Vancouver, BC, and ended up going to graduate school at the University
+          of British Columbia. I obtained a PhD in Experimental Medicine under the supervison of Dr. Scott Tebbutt.
+        </p>
+        <p class="tab">
+          Currently, I am researcher at the University of British Columbia, studying asthma and heart failure. I am interested in identifying
+          molecular biomarkers of different disease phenotypes. I am also interested in developing algorithms to integration
+          multiple omics datasets obtained on the same set of individuals. Lastly, I am interesting in developing web applications
+          that aid in the interpretation/visualizations of complex statistical models.
+        </p>
+      </div>
+    </main>
+
+  </div>
+
+  <footer class="footer">
+    Copyright &copy;
+  </footer>
+</body>
+
+</html>

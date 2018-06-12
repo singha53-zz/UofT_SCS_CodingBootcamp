@@ -1,31 +1,56 @@
-/* Common styles for all webpages */
+/* HTML element common to all pages */
+html,
+body {
+  height: 100%;
+  margin: 0;
+  font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
+  background: url('../../assets/images/light-grey-terrazzo.png');
+}
+
+h1 {
+  font-family: 'Georgia', Times, Times New Roman, serif;
+  font-size: 28px;
+  font-weight: 900;
+}
+
+.content {
+  padding: 0px;
+  min-height: 100%;
+  margin: 0 auto -70px;
+}
+
+.footer {
+  height: 50px;
+}
 
 header {
   text-align: center;
   padding: 0;
-  margin: 0 auto;
   background-color: white;
-  display: flex;
-  justify-content: center;
   border-bottom: 1px solid #cccccc;
+  height: 50px;
 }
 
 .nav {
+  position: relative;
   width: 960px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
+  margin: 0 auto;
 }
 
 #name {
-  margin: 0px 0 0 0px;
-  color: white;
-  background: #4aaaa5;
+  position: absolute;
+  left: 0;
+  background-color: #4aaaa5;
+  display: flex;
+  align-items: center;
+  height: 50px;
+  color: #ffffff;
   padding: 20px;
 }
 
 .navbar-items {
+  position: absolute;
+  right: 0;
   display: flex;
   /*set display property to flex in order to use CSS Flexbox*/
   flex-wrap: wrap;
@@ -47,22 +72,29 @@ header {
 }
 
 /* remove underlines from achor tags */
+
 a {
   text-decoration: none;
 }
+
 /* remove visited link color */
+
 a:visited {
   color: #777777;
 }
 
 main {
-  margin: 50px auto;
-  padding: 30px 50px;
-  line-height: 2;
+  margin: 20px auto;
+  padding: 20px;
   border: #dddddd solid 1px;
-  width: 858px;
+  width: 960px;
+  line-height: 1.5;
   background-color: #ffffff;
   color: #777777;
+}
+
+.tab {
+  text-indent: 40px;
 }
 
 #profilePic {
@@ -70,36 +102,25 @@ main {
   padding-right: 15px;
 }
 
+.clearfix::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+* {
+  box-sizing: border-box;
+}
+
 footer {
-  margin: 0;
-  padding: 40px 0px 0px 0px;
-  color: #ffffff;
   background: #666666;
-  border-top: 6px solid #4aaaa5;
+  color: white;
+  padding: 0 20px;
   text-align: center;
-}
-
-/* heading font-color */
-h1 {
-  font-family: 'Georgia', Times, Times New Roman, serif;
-  font-size: 28px;
-}
-
-/* font family for all other text apart from the heading */
-body {
-  font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
-  background: url('../../assets/images/light-grey-terrazzo.png');
-}
-
-#about,
-#portfolio {
-  color: #4aaaa5;
-  font-weight: 900;
-}
-
-/* keep images within main content container */
-.clearfix {
-  overflow: auto;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  border-top: #4aaaa5 solid 4px;
 }
 
 /* */

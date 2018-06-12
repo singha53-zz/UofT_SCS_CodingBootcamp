@@ -11,14 +11,14 @@
   </style>
 </head>
 
-<body>
 
-  <header>
-    <div class="nav">
-      <a id="name">
-        <h1>Amrit Singh</h1>
-      </a>
-      <div>
+<body>
+  <div class="content">
+    <header>
+      <div class="nav">
+        <a id="name">
+          <h1>Amrit Singh</h1>
+        </a>
         <ul class="navbar-items">
           <li class="nav-item">
             <a href="index.html">About</a>
@@ -31,20 +31,32 @@
           </li>
         </ul>
       </div>
-    </div>
-  </header>
+    </header>
 
-  <main>
-    <h1 id="about">Contact</h1>
-    <hr>
+    <main class="clearfix">
+      <h1 id="about">Contact</h1>
+      <hr>
+      <form action="">
+        Name
+        <br>
+        <input type="text" placeholder="John Smith">
+        <br> Email
+        <br>
+        <input type="email" placeholder="example@gmail.com">
+        <br> Message
+        <br>
+        <textarea name="" id="" cols="80" rows="10"></textarea>
+        <br>
+        <br>
+        <button type="submit">Submit</button>
+      </form>
+    </main>
 
-  </main>
+  </div>
 
-  <footer>
-    <p>Copyright &copy; </p>
+  <footer class="footer">
+    Copyright &copy;
   </footer>
-
-
 </body>
 
 </html>
