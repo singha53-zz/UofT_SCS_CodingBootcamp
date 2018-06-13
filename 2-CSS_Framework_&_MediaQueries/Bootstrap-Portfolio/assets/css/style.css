@@ -23,6 +23,10 @@ h1 {
   font-weight: 900;
 }
 
+.heading {
+  color: #4aaaa5
+}
+
 .footer {
   height: 50px;
   background: #666666;
