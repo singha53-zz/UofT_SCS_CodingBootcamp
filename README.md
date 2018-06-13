@@ -15,13 +15,13 @@
 [website](http://amritsingh.ca/UofT_SCS_CodingBootcamp/1-HTML_CSS_homework/Basic-Portfolio/)
 
 ## CSS_Framework_&_MediaQueries <a name="css-framework-mediaqueries"></a>
-Part 1: Bootstrap
+Part 1: Bootstrap <br>
 <strong>Obective</strong>: build a professional portfolio site containing 3 pages (About, Contact and Portfolio) that is responsive using . <br>
 <strong>Used</strong>: HTML, CSS, bootstrap CDN <br>
 [repo](https://github.com/singha53/UofT_SCS_CodingBootcamp/tree/master/2-CSS_Framework_&_MediaQueries/Bootstrap-Portfolio) <br>
 [website](http://amritsingh.ca/UofT_SCS_CodingBootcamp/2-CSS_Framework_&_MediaQueries/Bootstrap-Portfolio/)
 
-Part 2: Media Queries
+Part 2: Media Queries <br>
 <strong>Obective</strong>: modify HTML_CSS_homework and make the website responsive using media queries. <br>
 <strong>Used</strong>: HTML, CSS (with media queries) <br>
 [repo](https://github.com/singha53/UofT_SCS_CodingBootcamp/tree/master/2-CSS_Framework_&_MediaQueries/Responsive-Portfolio) <br>
