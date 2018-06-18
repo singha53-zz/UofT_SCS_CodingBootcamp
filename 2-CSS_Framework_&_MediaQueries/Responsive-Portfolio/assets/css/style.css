@@ -1,0 +1,189 @@
+/* ######################################## */
+/* HTML element common to all pages */
+/* ######################################## */
+html,
+body {
+  height: 100%;
+  margin: 0;
+  font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
+  background: url('../../assets/images/light-grey-terrazzo.png');
+}
+
+h1 {
+  font-family: 'Georgia', Times, Times New Roman, serif;
+  font-size: 28px;
+  font-weight: 900;
+}
+
+.content {
+  padding: 0px;
+  min-height: 100%;
+  margin: 0 auto -70px;
+}
+
+header {
+  text-align: center;
+  padding: 0;
+  background-color: white;
+  border-bottom: 1px solid #cccccc;
+  height: 50px;
+}
+
+.nav {
+  position: relative;
+  width: 960px;
+  margin: 0 auto;
+}
+
+#name {
+  position: absolute;
+  left: 0;
+  background-color: #4aaaa5;
+  display: flex;
+  align-items: center;
+  height: 50px;
+  color: #ffffff;
+  padding: 20px;
+}
+
+.navbar-items {
+  position: absolute;
+  right: 0;
+  display: flex;
+  /*set display property to flex in order to use CSS Flexbox*/
+  flex-wrap: wrap;
+  /*fits all list items a single line*/
+  list-style: none;
+  /*remove bullet points from list*/
+}
+
+.nav-item {
+  padding: 0rem;
+  margin: 1rem;
+}
+
+/* remove underlines from achor tags */
+a {
+  text-decoration: none;
+}
+
+/* remove visited link color */
+a:visited {
+  color: #777777;
+}
+
+/* change color of links upon hover */
+a:hover {
+  color: blue;
+}
+
+main {
+  margin: 20px auto;
+  padding: 20px;
+  border: #dddddd solid 1px;
+  width: 960px;
+  line-height: 2;
+  background-color: #ffffff;
+  color: #777777;
+}
+
+.clearfix::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+footer {
+  height: 50px;
+  background: #666666;
+  color: white;
+  padding: 0 20px;
+  text-align: center;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  border-top: #4aaaa5 solid 4px;
+}
+
+.heading {
+  color: #4aaaa5;
+}
+
+hr {
+  display: block;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  margin-left: auto;
+  margin-right: auto;
+  border-style: inset;
+  border-width: 2px;
+}
+
+/* ######################################## */
+/* CSS sytles for about page */
+/* ######################################## */
+/* indent paragraphs */
+.tab {
+  text-indent: 40px;
+}
+
+#profilePic {
+  float: left;
+  padding-right: 15px;
+}
+
+#contact {
+  border-left: solid 1px;
+  border-right: solid 1px;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+/* ######################################## */
+/* CSS sytles for portfolio page */
+/* ######################################## */
+.container {
+  float: left;
+  position: relative;
+  text-align: end;
+  color: white;
+  border: #4aaaa5;
+}
+
+.imageLabel {
+  position: relative;
+  background: #4aaaa5;
+  text-align: center;
+  width: 200px;
+  top: -50px;
+}
+
+.apps {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+/* ######################################## */
+/* CSS sytles for contact page */
+/* ######################################## */
+textarea {
+  width: 100%;
+}
+
+input {
+  width: 100%;
+  padding: 5px;
+}
+
+button {
+  font-size: 20px;
+  padding: 20px 40px;
+  background-color: #4aaaa5;
+  color: #ffffff;
+  border: none;
+}
