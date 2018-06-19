@@ -40,9 +40,6 @@ h1 {
 }
 
 .container {
-  padding-top: 3rem;
-}
-
-.jumbotron {
-  padding: 4rem 1rem;
+  padding-top: 1rem;
+  margin-top: 2rem;
 }
