@@ -24,3 +24,7 @@ div {
   text-align: center;
   font-family: 'Cinzel', serif;
 }
+
+.img-fluid {
+  padding-bottom: 5px;
+}
