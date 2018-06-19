@@ -156,20 +156,28 @@ hr {
   text-align: end;
   color: white;
   border: #4aaaa5;
+  width: 40%;
+  margin: 5%;
 }
 
 .imageLabel {
   position: relative;
   background: #4aaaa5;
   text-align: center;
-  width: 200px;
+  width: 100%;
   top: -50px;
+  font-size: 20px;
 }
 
 .apps {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
+}
+
+img {
+  width: 100%;
+  height: 100%;
 }
 
 /* ######################################## */
@@ -234,5 +242,8 @@ button {
   }
   #profilePic {
     width: 100%;
+  }
+  .container {
+    width: 100%
   }
 }
