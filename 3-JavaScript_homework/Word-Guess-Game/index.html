@@ -24,11 +24,7 @@
       <i class="far fa-futbol"></i> 18 FIFA WORLD CUP HANGMAN GAME
       <i class="fas fa-trophy"></i>
     </h1>
-    <h3>Rules:</h3>
-    <span>
-      1) Guess the country by pressing letters on your keyboard or typing in the coun 2) You get a maximum of 10 guesses. 3) Click
-      the "Hint" if you would like a hint! 4) Your score will appear on the Score board! 5) Have FUN!
-    </span>
+    <h3 style="text-align: center">Press any key to get started!</h3>
   </div>
 
   <div class="container">
@@ -75,7 +71,7 @@
     </div>
     <div class="row">
       <!-- Group D -->
-      <div class="col-1">
+      <div id="leftPanel" class="col-1">
         <div class="row">
           <div class="col-12">
             <img class="img-fluid" src="flags/4x3/hr.svg" alt="">
@@ -101,10 +97,13 @@
 
         <div class="row">
           <div class="col-6">
-            <p class="question">Summary</p>
+            <img id="flag" class="img-fluid" src="" alt="">
           </div>
-          <div class="col-6" id="country">
-
+          <div id="hangman" class="col-6">
+            <h1>Current Country</h1>
+            <div id="country">
+            </div>
+            <div id="summary"></div>
           </div>
         </div>
       </div>
@@ -174,6 +173,14 @@
 
   <!-- <script src="assets/javascript/game.js"></script> -->
   <script>
+    // declare variables
+    var wins = 0;
+    var losses = 0;
+    var tries = 9;
+    var triesLeft = 9;
+
+    // set CSS styling 
+    document.getElementById('hangman').style.alignItems = 'space-between';
     document.getElementById('country').style.padding = 0;
     document.getElementById('country').style.display = 'flex';
     document.getElementById('country').style.alignItems = 'space-between';
@@ -187,9 +194,14 @@
     }
 
     function displayCountryLines(country) {
+      // remove previous children dispatchEventvar
+      myNode = document.getElementById("country");
+      while (myNode.firstChild) {
+        myNode.removeChild(myNode.firstChild);
+      }
       for (let i = 0; i < country.length; i++) {
         var newDiv = document.createElement('div');
-        size = document.getElementById('country').offsetWidth / country.length;
+        size = myNode.offsetWidth / country.length;
 
         // add CSS to new div
         newDiv.style.width = size + 'px';
@@ -201,7 +213,7 @@
         // add id to each div
         newDiv.classList.add(country[i]);
 
-        document.getElementById('country').appendChild(newDiv);
+        myNode.appendChild(newDiv);
       }
     }
 
@@ -209,28 +221,101 @@
     console.log(country);
     displayCountryLines(country);
 
+    function unique_char(str1) {
+      var str = str1;
+      var uniql = "";
+      for (var x = 0; x < str.length; x++) {
+
+        if (uniql.indexOf(str.charAt(x)) == -1) {
+          uniql += str[x];
+
+        }
+      }
+      return uniql;
+    }
+
+    function displayInfo(wins, losses, triesLeft, guesses) {
+      myNode = document.getElementById("summary");
+      while (myNode.firstChild) {
+        myNode.removeChild(myNode.firstChild);
+      }
+
+      // add wins to summary section
+      var winsPara = document.createElement('p')
+      var winsText = document.createTextNode(`Wins: ${wins}`)
+      winsPara.appendChild(winsText)
+      myNode.appendChild(winsPara)
+
+      // add lossess to summary section
+      var lossesPara = document.createElement('p')
+      var lossesText = document.createTextNode(`Losses: ${losses}`)
+      lossesPara.appendChild(lossesText)
+      myNode.appendChild(lossesPara)
+
+      // display guesses letters
+      var guessesPara = document.createElement('p')
+      var guessesText = document.createTextNode(`Letters already guessed: ${guesses.join()}`)
+      guessesPara.appendChild(guessesText)
+      myNode.appendChild(guessesPara)
+
+      // number of guesses remaining
+      var remainingGuessesPara = document.createElement('p')
+      var remainingGuessesText = document.createTextNode(`Number of guesses remaining: ${triesLeft}`)
+      remainingGuessesPara.appendChild(remainingGuessesText)
+      myNode.appendChild(remainingGuessesPara)
+    }
 
     // empty array to store guesses
     guesses = []
     document.onkeyup = function (e) {
       input = e.key.toUpperCase();
-
       // only add input to guesses if letter has not been previously guessed
       if (guesses.indexOf(input) === -1) {
         guesses.push(input)
+        triesLeft = tries - guesses.length
       }
+      // check if user won!
+      var win = guesses.filter(function (e) {
+        return unique_char(country).indexOf(e) > -1;
+      })
       console.log(guesses)
-      console.log(country)
+
       checkGuess(input, country);
 
-      // display guesses
+      if (win.length === unique_char(country).length) {
+        console.log("you win")
+        document.getElementById('flag').setAttribute('src', `flags/${country}.svg`)
+        guesses = []
+        country = chooseCountry();
+        console.log(country);
+        displayCountryLines(country);
+        wins++;
+        tries = 9;
+        triesLeft = 9;
+        console.log("wins:" + wins)
+      } else if (guesses.length < (tries + 1)) {
+        document.getElementById('flag').setAttribute('src', '')
+        console.log(triesLeft)
+      } else {
+        console.log("you lose")
+        document.getElementById('flag').setAttribute('src', '')
+        console.log(country)
+        document.getElementById('flag').setAttribute('src', 'flags/keep-trying-png-carry-on-and-keep-trying-without-losing-my-edge-800.png')
+        country = chooseCountry();
+        console.log(country);
+        displayCountryLines(country);
+        guesses = []
+        losses++;
+        console.log("losses" + losses)
+        tries = 9;
+        triesLeft = 9;
+      }
+
+      displayInfo(wins, losses, triesLeft, guesses)
     }
 
     // check guesses
     function checkGuess(input, country) {
-      console.log(input)
-      console.log(country)
-      console.log(country.indexOf(input))
       if (country.indexOf(input) === -1) {
         // displayletters used
       } else {
@@ -240,7 +325,6 @@
           letterDiv[i].innerHTML = input;
         }
       }
-      console.log(country.indexOf(input))
     }
 
   </script>

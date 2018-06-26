@@ -1,5 +1,7 @@
 /* set height html page to 100% */
-html {
+
+html,
+body {
   position: relative;
   min-height: 100%;
 }
@@ -28,4 +30,8 @@ div {
 
 .img-fluid {
   padding-bottom: 5px;
+}
+
+h1 {
+  text-align: center;
 }
