@@ -35,3 +35,10 @@ div {
 h1 {
   text-align: center;
 }
+
+#leftPanel,
+#rightPanel {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}

@@ -24,7 +24,7 @@
       <i class="far fa-futbol"></i> 18 FIFA WORLD CUP HANGMAN GAME
       <i class="fas fa-trophy"></i>
     </h1>
-    <h3 style="text-align: center">Press any key to get started!</h3>
+    <h3 style="text-align: center">Press any alphabetical letter to get started!</h3>
   </div>
 
   <div class="container">
@@ -72,26 +72,10 @@
     <div class="row">
       <!-- Group D -->
       <div id="leftPanel" class="col-1">
-        <div class="row">
-          <div class="col-12">
-            <img class="img-fluid" src="flags/4x3/hr.svg" alt="">
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-12">
-            <img class="img-fluid" src="flags/4x3/is.svg" alt="">
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-12">
-            <img class="img-fluid" src="flags/4x3/ar.svg" alt="">
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-12">
-            <img class="img-fluid" src="flags/4x3/ng.svg" alt="">
-          </div>
-        </div>
+        <img class="img-fluid" src="flags/4x3/hr.svg" alt="">
+        <img class="img-fluid" src="flags/4x3/is.svg" alt="">
+        <img class="img-fluid" src="flags/4x3/ar.svg" alt="">
+        <img class="img-fluid" src="flags/4x3/ng.svg" alt="">
       </div>
       <div class="col-10">
 
@@ -107,27 +91,11 @@
           </div>
         </div>
       </div>
-      <div class="col-1">
-        <div class="row">
-          <div class="col-12">
-            <img class="img-fluid" src="flags/4x3/rs.svg" alt="">
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-12">
-            <img class="img-fluid" src="flags/4x3/br.svg" alt="">
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-12">
-            <img class="img-fluid" src="flags/4x3/ch.svg" alt="">
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-12">
-            <img class="img-fluid" src="flags/4x3/cr.svg" alt="">
-          </div>
-        </div>
+      <div id="rightPanel" class="col-1">
+        <img class="img-fluid" src="flags/4x3/rs.svg" alt="">
+        <img class="img-fluid" src="flags/4x3/br.svg" alt="">
+        <img class="img-fluid" src="flags/4x3/ch.svg" alt="">
+        <img class="img-fluid" src="flags/4x3/cr.svg" alt="">
       </div>
     </div>
     <div class="row">
@@ -218,7 +186,6 @@
     }
 
     var country = chooseCountry();
-    console.log(country);
     displayCountryLines(country);
 
     function unique_char(str1) {
@@ -265,48 +232,47 @@
       myNode.appendChild(remainingGuessesPara)
     }
 
+    alphabet = 'abcdefghijklmnopqrstuvwxyz'.toUpperCase().split('');
+
     // empty array to store guesses
     guesses = []
     document.onkeyup = function (e) {
       input = e.key.toUpperCase();
+
+      if (alphabet.indexOf(input) === -1) {
+        alert("Not a valid entry. Please only use letters of the alphabet!")
+      }
+
       // only add input to guesses if letter has not been previously guessed
       if (guesses.indexOf(input) === -1) {
         guesses.push(input)
         triesLeft = tries - guesses.length
       }
+
       // check if user won!
       var win = guesses.filter(function (e) {
         return unique_char(country).indexOf(e) > -1;
       })
-      console.log(guesses)
 
       checkGuess(input, country);
 
       if (win.length === unique_char(country).length) {
-        console.log("you win")
         document.getElementById('flag').setAttribute('src', `flags/${country}.svg`)
         guesses = []
         country = chooseCountry();
-        console.log(country);
         displayCountryLines(country);
         wins++;
         tries = 9;
         triesLeft = 9;
-        console.log("wins:" + wins)
       } else if (guesses.length < (tries + 1)) {
         document.getElementById('flag').setAttribute('src', '')
-        console.log(triesLeft)
       } else {
-        console.log("you lose")
         document.getElementById('flag').setAttribute('src', '')
-        console.log(country)
         document.getElementById('flag').setAttribute('src', 'flags/keep-trying-png-carry-on-and-keep-trying-without-losing-my-edge-800.png')
         country = chooseCountry();
-        console.log(country);
         displayCountryLines(country);
         guesses = []
         losses++;
-        console.log("losses" + losses)
         tries = 9;
         triesLeft = 9;
       }
